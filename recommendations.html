@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <meta content="Get a movie recommendation based on your mood." name="description"/>
+        <title>
+            Movie Recommendations
+        </title>
+        <link href="css/style.css" rel="stylesheet"/>
+        <script defer="" src="js/script.js">
+        </script>
+    </head>
+    <body>
+        <a class="skip-link" href="#main-content">
+            Skip to main content
+        </a>
+        <header class="site-header">
+            <button aria-controls="primary-nav" aria-expanded="false" class="menu-toggle" type="button">
+                Menu
+            </button>
+            <nav aria-label="Main navigation" class="primary-nav" id="primary-nav">
+                <a href="index.html">
+                    Home
+                </a>
+                <a href="movies.html">
+                    Movies
+                </a>
+                <a href="recommendations.html">
+                    For You
+                </a>
+                <a href="booking.html">
+                    Book Tickets
+                </a>
+                <a href="register.html">
+                    Register
+                </a>
+            </nav>
+        </header>
+        <main id="main-content">
+            <section class="page-hero">
+                <p class="eyebrow">
+                    A LITTLE HELP FROM US
+                </p>
+                <h1>
+                    What's your
+                    <span>
+                        kind of night?
+                    </span>
+                </h1>
+                <p>
+                    Answer two quick questions and we'll match you with a movie from our collection.
+                </p>
+            </section>
+            <section class="section recommendation-layout">
+                <form class="form-card" id="recommendation-form">
+                    <div class="form-section">
+                        <p class="eyebrow">
+                            QUESTION 01
+                        </p>
+                        <h2>
+                            Pick your mood
+                        </h2>
+                        <div class="choice-grid">
+                            <label class="choice-card">
+                                <input name="mood" required="" type="radio" value="excited"/>
+                                <strong>
+                                    Excited
+                                </strong>
+                                <small>
+                                    Action and adventure
+                                </small>
+                            </label>
+                            <label class="choice-card">
+                                <input name="mood" type="radio" value="thoughtful"/>
+                                <strong>
+                                    Thoughtful
+                                </strong>
+                                <small>
+                                    Stories with meaning
+                                </small>
+                            </label>
+                            <label class="choice-card">
+                                <input name="mood" type="radio" value="happy"/>
+                                <strong>
+                                    Happy
+                                </strong>
+                                <small>
+                                    Fun and feel-good
+                                </small>
+                            </label>
+                            <label class="choice-card">
+                                <input name="mood" type="radio" value="curious"/>
+                                <strong>
+                                    Curious
+                                </strong>
+                                <small>
+                                    Mystery and discovery
+                                </small>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-section">
+                        <p class="eyebrow">
+                            QUESTION 02
+                        </p>
+                        <h2>
+                            Choose a genre
+                        </h2>
+                        <label for="preferred-genre">
+                            What do you feel like watching?
+                        </label>
+                        <select class="control" id="preferred-genre" name="genre">
+                            <option value="any">
+                                Surprise me
+                            </option>
+                            <option value="Action">
+                                Action
+                            </option>
+                            <option value="Adventure">
+                                Adventure
+                            </option>
+                            <option value="Comedy">
+                                Comedy
+                            </option>
+                            <option value="Drama">
+                                Drama
+                            </option>
+                            <option value="Science Fiction">
+                                Science Fiction
+                            </option>
+                            <option value="Animation">
+                                Animation
+                            </option>
+                            <option value="Thriller">
+                                Thriller
+                            </option>
+                        </select>
+                    </div>
+                    <button class="button button-primary button-full" type="submit">
+                        Find my movie
+                        <span aria-hidden="true">
+                            &rarr;
+                        </span>
+                    </button>
+                    <p class="field-error" id="recommendation-error" role="alert">
+                    </p>
+                </form>
+                <div aria-live="polite" class="recommendation-result" id="recommendation-result">
+                    <div class="result-placeholder">
+                        <h2>
+                            Your next favourite is out there.
+                        </h2>
+                        <p>
+                            Choose your mood and a genre, then let us do the matching.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+       <footer class="site-footer">
+            <h1>Swinburne University of Technology</h1>
+            <h2>School of Science, Computing and Engineering Technologies</h2>
+            <h3>COS10005 Web Development</h3>
+            <h4>Jalen Simpson 105913064</h4>
+            <h3>Assignment 2, Semester 2, 2026</h3>
+            <p class="footer-small">
+                Student website demonstration &middot; © 2026 Movie Discovery. All rights reserved.
+                Movie titles, posters, images and related trademarks belong to their respective copyright owners. They are used for educational and demonstration purposes only as part of a university assignment. This website is a student project and is not affiliated with or endorsed by any movie studios or distributors.
+            </p>
+        </footer>
+    </body>
+</html>

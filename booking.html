@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <meta content="Choose a movie and estimate your cinema ticket cost." name="description"/>
+        <title>
+            Book Tickets
+        </title>
+        <link href="css/style.css" rel="stylesheet"/>
+        <script defer="" src="js/script.js">
+        </script>
+    </head>
+    <body>
+        <a class="skip-link" href="#main-content">
+            Skip to main content
+        </a>
+        <header class="site-header">
+            <button aria-controls="primary-nav" aria-expanded="false" class="menu-toggle" type="button">
+                Menu
+            </button>
+            <nav aria-label="Main navigation" class="primary-nav" id="primary-nav">
+                <a href="index.html">
+                    Home
+                </a>
+                <a href="movies.html">
+                    Movies
+                </a>
+                <a href="recommendations.html">
+                    For You
+                </a>
+                <a href="booking.html">
+                    Book Tickets
+                </a>
+                <a href="register.html">
+                    Register
+                </a>
+            </nav>
+        </header>
+        <main id="main-content">
+            <section class="page-hero compact-hero">
+                <p class="eyebrow">
+                    YOUR CINEMA PLAN
+                </p>
+                <h1>
+                    Make it a
+                    <span>
+                        movie night.
+                    </span>
+                </h1>
+                <p>
+                    Choose your film and tickets. Your estimated total updates as you go.
+                </p>
+            </section>
+            <section class="section booking-layout">
+                <form class="form-card" id="booking-form" novalidate="">
+                    <div class="form-section">
+                        <p class="eyebrow">
+                            01 / THE FILM
+                        </p>
+                        <h2>
+                            What are we watching?
+                        </h2>
+                        <label for="booking-movie">
+                            Choose a movie
+                            <span class="required">
+                                *
+                            </span>
+                        </label>
+                        <select class="control" id="booking-movie" name="movie" required="">
+                            <option value="">
+                                Select a movie
+                            </option>
+                        </select>
+                        <p class="field-error" id="movie-error">
+                        </p>
+                        <div class="two-column">
+                            <div>
+                                <label for="show-date">
+                                    Date
+                                    <span class="required">
+                                        *
+                                    </span>
+                                </label>
+                                <input class="control" id="show-date" name="showDate" required="" type="date"/>
+                                <p class="field-error" id="date-error">
+                                </p>
+                            </div>
+                            <div>
+                                <label for="show-time">
+                                    Session
+                                    <span class="required">
+                                        *
+                                    </span>
+                                </label>
+                                <select class="control" id="show-time" name="showTime" required="">
+                                    <option value="">
+                                        Choose a time
+                                    </option>
+                                    <option>
+                                        10:00 AM
+                                    </option>
+                                    <option>
+                                        1:00 PM
+                                    </option>
+                                    <option>
+                                        4:00 PM
+                                    </option>
+                                    <option>
+                                        7:00 PM
+                                    </option>
+                                    <option>
+                                        9:30 PM
+                                    </option>
+                                </select>
+                                <p class="field-error" id="time-error">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-section">
+                        <p class="eyebrow">
+                            02 / YOUR TICKETS
+                        </p>
+                        <h2>
+                            Who's coming along?
+                        </h2>
+                        <div class="two-column">
+                            <div>
+                                <label for="ticket-type">
+                                    Ticket type
+                                    <span class="required">
+                                        *
+                                    </span>
+                                </label>
+                                <select class="control" id="ticket-type" name="ticketType">
+                                    <option value="adult">
+                                        Adult &mdash; $22.00
+                                    </option>
+                                    <option value="student">
+                                        Student &mdash; $18.00
+                                    </option>
+                                    <option value="child">
+                                        Child &mdash; $14.00
+                                    </option>
+                                    <option value="senior">
+                                        Senior &mdash; $16.00
+                                    </option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="ticket-quantity">
+                                    Number of tickets
+                                    <span class="required">
+                                        *
+                                    </span>
+                                </label>
+                                <select class="control" id="ticket-quantity" name="quantity">
+                                    <option>
+                                        1
+                                    </option>
+                                    <option>
+                                        2
+                                    </option>
+                                    <option>
+                                        3
+                                    </option>
+                                    <option>
+                                        4
+                                    </option>
+                                    <option>
+                                        5
+                                    </option>
+                                    <option>
+                                        6
+                                    </option>
+                                    <option>
+                                        7
+                                    </option>
+                                    <option>
+                                        8
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        <label class="check-row">
+                            <input id="snack-combo" name="snackCombo" type="checkbox"/>
+                            <span>
+                                Add snack combo (+$9.50 per ticket)
+                            </span>
+                        </label>
+                        <label class="check-row">
+                            <input id="premium-screen" name="premiumScreen" type="checkbox"/>
+                            <span>
+                                Premium screen (+$5.00 per ticket)
+                            </span>
+                        </label>
+                    </div>
+                    <div class="form-section">
+                        <p class="eyebrow">
+                            03 / CONTACT DETAILS
+                        </p>
+                        <h2>
+                            Where can we reach you?
+                        </h2>
+                        <label for="booking-name">
+                            Full name
+                            <span class="required">
+                                *
+                            </span>
+                        </label>
+                        <input autocomplete="name" class="control" id="booking-name" name="fullName" required=""/>
+                        <p class="field-error" id="name-error">
+                        </p>
+                        <label for="booking-email">
+                            Email address
+                            <span class="required">
+                                *
+                            </span>
+                        </label>
+                        <input autocomplete="email" class="control" id="booking-email" name="email" required="" type="email"/>
+                        <p class="field-error" id="email-error">
+                        </p>
+                    </div>
+                    <div class="form-section">
+                        <p class="eyebrow">
+                            04 / PAYMENT DEMO
+                        </p>
+                        <h2>
+                            Payment method
+                        </h2>
+                        <p class="muted small-copy">
+                            This student project does not process real payments or store card details.
+                        </p>
+                        <div class="radio-stack">
+                            <label class="check-row">
+                                <input checked="" name="payment" type="radio" value="card"/>
+                                <span>
+                                    Credit / debit card (demo)
+                                </span>
+                            </label>
+                            <label class="check-row">
+                                <input name="payment" type="radio" value="counter"/>
+                                <span>
+                                    Pay at cinema counter (demo)
+                                </span>
+                            </label>
+                        </div>
+                        <div class="form-section" id="card-details">
+                            <label for="card-number">
+                                Demo card number
+                            </label>
+                            <input autocomplete="off" class="control" id="card-number" inputmode="numeric" name="cardNumber" placeholder="Enter any 12 or more digits" type="text"/>
+                            <p class="field-error" id="card-number-error">
+                            </p>
+                        </div>
+                    </div>
+                    <button class="button button-primary button-full" type="submit">
+                        Review booking
+                        <span aria-hidden="true">
+                            &rarr;
+                        </span>
+                    </button>
+                    <div aria-live="polite" class="form-message" id="booking-message" role="status">
+                    </div>
+                </form>
+                <aside class="summary-card">
+                    <p class="eyebrow">
+                        YOUR SUMMARY
+                    </p>
+                    <div class="summary-art" id="summary-art">
+                    </div>
+                    <h2 id="summary-title">
+                        Your movie awaits
+                    </h2>
+                    <p class="muted" id="summary-genre">
+                        Select a film to see its details.
+                    </p>
+                    <div class="summary-line">
+                        <span>
+                            Ticket price
+                        </span>
+                        <strong id="summary-price">
+                            $0.00
+                        </strong>
+                    </div>
+                    <div class="summary-line">
+                        <span>
+                            Tickets
+                        </span>
+                        <strong id="summary-quantity">
+                            1
+                        </strong>
+                    </div>
+                    <div class="summary-line">
+                        <span>
+                            Extras
+                        </span>
+                        <strong id="summary-extras">
+                            $0.00
+                        </strong>
+                    </div>
+                    <div class="summary-line total-line">
+                        <span>
+                            Estimated total
+                        </span>
+                        <strong id="summary-total">
+                            $0.00
+                        </strong>
+                    </div>
+                    <p class="summary-note">
+                        Prices are illustrative for this assignment. No payment is taken.
+                    </p>
+                </aside>
+            </section>
+        </main>
+        <footer class="site-footer">
+            <h1>Swinburne University of Technology</h1>
+            <h2>School of Science, Computing and Engineering Technologies</h2>
+            <h3>COS10005 Web Development</h3>
+            <h4>Jalen Simpson 105913064</h4>
+            <h3>Assignment 2, Semester 2, 2026</h3>
+            <p class="footer-small">
+                Student website demonstration &middot; © 2026 Movie Discovery. All rights reserved.
+                Movie titles, posters, images and related trademarks belong to their respective copyright owners. They are used for educational and demonstration purposes only as part of a university assignment. This website is a student project and is not affiliated with or endorsed by any movie studios or distributors.
+            </p>
+        </footer>
+    </body>
+</html>

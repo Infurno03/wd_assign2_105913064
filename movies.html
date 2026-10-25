@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <meta content="Browse the movie list." name="description"/>
+        <title>
+            Movies
+        </title>
+        <link href="css/style.css" rel="stylesheet"/>
+        <script defer="" src="js/script.js">
+        </script>
+    </head>
+    <body>
+        <a class="skip-link" href="#main-content">
+            Skip to main content
+        </a>
+        <header class="site-header">
+            <button aria-controls="primary-nav" aria-expanded="false" class="menu-toggle" type="button">
+                Menu
+            </button>
+            <nav aria-label="Main navigation" class="primary-nav" id="primary-nav">
+                <a href="index.html">
+                    Home
+                </a>
+                <a href="movies.html">
+                    Movies
+                </a>
+                <a href="recommendations.html">
+                    For You
+                </a>
+                <a href="booking.html">
+                    Book Tickets
+                </a>
+                <a href="register.html">
+                    Register
+                </a>
+            </nav>
+        </header>
+        <main id="main-content">
+            <section class="page-hero">
+                <p class="eyebrow">
+                    MOVIE LIST
+                </p>
+                <h1>
+                    Find your
+                    <span>
+                        next story.
+                    </span>
+                </h1>
+                <p>
+                    Browse the movie list, search by title or filter by genre.
+                </p>
+            </section>
+            <section class="section catalog-section">
+                <div class="catalog-toolbar">
+                    <div>
+                        <label class="sr-only" for="movie-search">
+                            Search movies
+                        </label>
+                        <input class="control search-control" id="movie-search" placeholder="Search titles or genres..." type="search"/>
+                    </div>
+                    <div>
+                        <label class="sr-only" for="genre-filter">
+                            Filter by genre
+                        </label>
+                        <select class="control" id="genre-filter">
+                            <option value="all">
+                                All genres
+                            </option>
+                            <option>
+                                Action
+                            </option>
+                            <option>
+                                Adventure
+                            </option>
+                            <option>
+                                Comedy
+                            </option>
+                            <option>
+                                Drama
+                            </option>
+                            <option>
+                                Science Fiction
+                            </option>
+                            <option>
+                                Animation
+                            </option>
+                            <option>
+                                Thriller
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <p aria-live="polite" class="muted result-count" id="movie-count">
+                </p>
+                <div class="movie-grid" id="all-movies">
+                </div>
+                <p class="empty-state" hidden="" id="no-movies">
+                    No movies match your search. Try another title or genre.
+                </p>
+            </section>
+        </main>
+        <footer class="site-footer">
+            <h1>Swinburne University of Technology</h1>
+            <h2>School of Science, Computing and Engineering Technologies</h2>
+            <h3>COS10005 Web Development</h3>
+            <h4>Jalen Simpson 105913064</h4>
+            <h3>Assignment 2, Semester 2, 2026</h3>
+            <p class="footer-small">
+                Student website demonstration &middot; © 2026 Movie Discovery. All rights reserved.
+                Movie titles, posters, images and related trademarks belong to their respective copyright owners. They are used for educational and demonstration purposes only as part of a university assignment. This website is a student project and is not affiliated with or endorsed by any movie studios or distributors.
+            </p>
+        </footer>
+    </body>
+</html>

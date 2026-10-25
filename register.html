@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <meta content="Create a ReelTime profile." name="description"/>
+        <title>
+            Register
+        </title>
+        <link href="css/style.css" rel="stylesheet"/>
+        <script defer="" src="js/script.js">
+        </script>
+    </head>
+    <body>
+        <a class="skip-link" href="#main-content">
+            Skip to main content
+        </a>
+        <header class="site-header">
+            <button aria-controls="primary-nav" aria-expanded="false" class="menu-toggle" type="button">
+                Menu
+            </button>
+            <nav aria-label="Main navigation" class="primary-nav" id="primary-nav">
+                <a href="index.html">
+                    Home
+                </a>
+                <a href="movies.html">
+                    Movies
+                </a>
+                <a href="recommendations.html">
+                    For You
+                </a>
+                <a href="booking.html">
+                    Book Tickets
+                </a>
+                <a href="register.html">
+                    Register
+                </a>
+            </nav>
+        </header>
+        <main id="main-content">
+            <section class="page-hero compact-hero">
+                <p class="eyebrow">
+                    JOIN THE CLUB
+                </p>
+                <h1>
+                    Your next movie night,
+                    <span>
+                        closer.
+                    </span>
+                </h1>
+                <p>
+                    Create a demo profile to get started. No account is sent to a server.
+                </p>
+            </section>
+            <section class="section register-layout">
+                <div class="register-intro">
+                    <div class="register-art">
+                        <img alt="Movie night illustration" src="images/movie-night.png"/>
+                    </div>
+                    <h2>
+                        A little more you.
+                        <br/>
+                        A lot more cinema.
+                    </h2>
+                    <p class="muted">
+                        Save the films you love and make choosing your next watch easier.
+                    </p>
+                    <ul class="benefit-list">
+                        <li>
+                            <span>
+                                &checkmark;
+                            </span>
+                            Keep a personal watchlist
+                        </li>
+                        <li>
+                            <span>
+                                &checkmark;
+                            </span>
+                            Find movies for your mood
+                        </li>
+                        <li>
+                            <span>
+                                &checkmark;
+                            </span>
+                            Plan your next cinema visit
+                        </li>
+                    </ul>
+                </div>
+                <form class="form-card" id="registration-form" novalidate="">
+                    <div class="form-section">
+                        <p class="eyebrow">
+                            YOUR DETAILS
+                        </p>
+                        <h2>
+                            Create your profile
+                        </h2>
+                        <label for="reg-name">
+                            Full name
+                            <span class="required">
+                                *
+                            </span>
+                        </label>
+                        <input autocomplete="name" class="control" id="reg-name" minlength="2" name="fullName" required=""/>
+                        <p class="field-error" id="reg-name-error">
+                        </p>
+                        <label for="reg-email">
+                            Email address
+                            <span class="required">
+                                *
+                            </span>
+                        </label>
+                        <input autocomplete="email" class="control" id="reg-email" name="email" required="" type="email"/>
+                        <p class="field-error" id="reg-email-error">
+                        </p>
+                        <label for="reg-username">
+                            Username
+                            <span class="required">
+                                *
+                            </span>
+                        </label>
+                        <input class="control" id="reg-username" maxlength="16" minlength="4" name="username" pattern="[A-Za-z0-9_]+" required=""/>
+                        <small class="hint">
+                            4&ndash;16 characters; letters, numbers and underscores only.
+                        </small>
+                        <p class="field-error" id="reg-username-error">
+                        </p>
+                        <label for="reg-password">
+                            Password
+                            <span class="required">
+                                *
+                            </span>
+                        </label>
+                        <input autocomplete="new-password" class="control" id="reg-password" minlength="8" name="password" required="" type="password"/>
+                        <small class="hint">
+                            At least 8 characters, including a letter and a number.
+                        </small>
+                        <p class="field-error" id="reg-password-error">
+                        </p>
+                        <label for="reg-confirm">
+                            Confirm password
+                            <span class="required">
+                                *
+                            </span>
+                        </label>
+                        <input autocomplete="new-password" class="control" id="reg-confirm" name="confirmPassword" required="" type="password"/>
+                        <p class="field-error" id="reg-confirm-error">
+                        </p>
+                        <label for="reg-birthdate">
+                            Date of birth
+                        </label>
+                        <input class="control" id="reg-birthdate" name="birthdate" type="date"/>
+                        <p class="field-error" id="reg-birthdate-error">
+                        </p>
+                        <label class="check-row consent-row">
+                            <input id="reg-consent" name="consent" required="" type="checkbox"/>
+                            <span>
+                                I agree to the demo website's terms and understand this form does not create a real online account.
+                                <span class="required">
+                                    *
+                                </span>
+                            </span>
+                        </label>
+                        <p class="field-error" id="reg-consent-error">
+                        </p>
+                        <button class="button button-primary button-full" type="submit">
+                            Create demo profile
+                            <span aria-hidden="true">
+                                &rarr;
+                            </span>
+                        </button>
+                        <div aria-live="polite" class="form-message" id="registration-message" role="status">
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </main>
+        <footer class="site-footer">
+            <h1>Swinburne University of Technology</h1>
+            <h2>School of Science, Computing and Engineering Technologies</h2>
+            <h3>COS10005 Web Development</h3>
+            <h4>Jalen Simpson 105913064</h4>
+            <h3>Assignment 2, Semester 2, 2026</h3>
+            <p class="footer-small">
+                Student website demonstration &middot; © 2026 Movie Discovery. All rights reserved.
+                Movie titles, posters, images and related trademarks belong to their respective copyright owners. They are used for educational and demonstration purposes only as part of a university assignment. This website is a student project and is not affiliated with or endorsed by any movie studios or distributors.
+            </p>
+        </footer>
+    </body>
+</html>

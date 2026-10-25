@@ -1,0 +1,331 @@
+/* Simple styling for the movie website assignment */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #222;
+    background: white;
+    line-height: 1.5;
+}
+
+.site-header {
+    padding: 15px;
+    background: #eeeeee;
+    border-bottom: 1px solid #cccccc;
+}
+
+.primary-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.primary-nav a {
+    color: #0645ad;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+main {
+    min-height: 60vh;
+}
+
+.hero, .section, .page-hero, .catalog-section, .booking-layout,
+.recommendation-layout, .register-layout {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.hero {
+    display: block;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 22px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+.eyebrow {
+    font-weight: bold;
+}
+
+.hero-art, .register-art, .summary-art, .movie-art {
+    background: #eeeeee;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.hero-poster {
+    padding: 10px;
+    border: 1px solid #999;
+}
+
+.poster-symbol, .poster-kicker, .poster-meta, .orbit,
+.floating-note, .hero-proof, .eyebrow-line, .callout-symbol {
+    display: none;
+}
+
+.hero-actions, .card-actions {
+    margin-top: 10px;
+}
+
+.button {
+    display: inline-block;
+    padding: 7px 10px;
+    margin: 4px 4px 4px 0;
+    color: #000;
+    background: #eeeeee;
+    border: 1px solid #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.text-link {
+    color: #0645ad;
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.movie-card, .form-card, .summary-card, .recommendation-result,
+.step-card, .callout, .choice-card {
+    border: 1px solid #cccccc;
+    padding: 12px;
+    background: white;
+}
+
+.movie-card {
+    overflow: hidden;
+}
+
+.movie-art {
+    min-height: 90px;
+    text-align: center;
+}
+
+.movie-art .art-symbol {
+    font-size: 30px;
+}
+
+.movie-info {
+    padding: 8px 0;
+}
+
+.movie-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.genre-pill {
+    background: #eeeeee;
+    padding: 2px 5px;
+}
+
+.icon-button {
+    padding: 5px;
+    border: 1px solid #999;
+    background: #eeeeee;
+    cursor: pointer;
+}
+
+.callout {
+    width: 90%;
+    max-width: 1000px;
+    margin: 15px auto;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.page-hero {
+    max-width: 1000px;
+}
+
+.catalog-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+input, select, textarea, button {
+    font: inherit;
+}
+
+input, select, textarea {
+    max-width: 100%;
+    padding: 7px;
+    border: 1px solid #999;
+    background: white;
+}
+
+label {
+    display: block;
+    margin: 8px 0 4px;
+}
+
+.form-card input:not([type="radio"]):not([type="checkbox"]),
+.form-card select, .form-card textarea {
+    width: 100%;
+}
+
+.form-card, .summary-card, .recommendation-result {
+    padding: 15px;
+}
+
+.form-group, .field-group, .form-section {
+    margin-bottom: 16px;
+}
+
+.booking-layout, .recommendation-layout, .register-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    align-items: start;
+}
+
+.two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.choice-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.choice-card {
+    padding: 10px;
+}
+
+.benefit-list {
+    padding-left: 20px;
+}
+
+.site-footer {
+    padding: 15px;
+    background: #eeeeee;
+    border-top: 1px solid #cccccc;
+    margin-top: 20px;
+}
+
+.footer-small {
+    font-size: 14px;
+}
+
+.skip-link {
+    position: absolute;
+    left: -10000px;
+    top: 10px;
+}
+
+.skip-link:focus {
+    left: 10px;
+    background: white;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+
+.field-error, .form-message {
+    color: #a00000;
+}
+
+@media (max-width: 750px) {
+    .movie-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .booking-layout, .recommendation-layout, .register-layout,
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .primary-nav {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .movie-grid, .choice-grid, .two-column {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Movie poster images and simple navigation states */
+.movie-art img, .summary-art img, .hero-poster img, .register-art img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.movie-art img {
+    width: 100%;
+    max-height: 260px;
+    object-fit: contain;
+}
+
+.summary-art img {
+    width: 150px;
+}
+
+.hero-poster img {
+    width: 180px;
+}
+
+.register-art img {
+    width: 100%;
+}
+
+.primary-nav a[aria-current="page"] {
+    font-weight: bold;
+    background: #dddddd;
+    padding: 3px;
+}
+
+@media (max-width: 750px) {
+    .primary-nav {
+        display: none;
+    }
+
+    .primary-nav.open {
+        display: flex;
+    }
+}
